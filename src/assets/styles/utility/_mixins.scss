@@ -1,0 +1,25 @@
+/**
+ * Media query breakpoints mixins
+ *
+ * Usage:
+ * div { width: 60px;
+ *  @include bp-min($small) { width: 80px; }
+ * }
+ */
+ @mixin bp-min($point: 0) {
+    @media (min-width: px-to-em($point)) {
+        @content;
+    }
+}
+
+@mixin bp-max($point: 0) {
+    @media (max-width: (px-to-em($point) - 0.0625em)) {
+        @content;
+    }
+}
+
+@mixin bp-min-max($min-point: 0, $max-point: 0) {
+    @media (min-width: px-to-em($min-point)) and (max-width: (px-to-em($max-point) - 0.0625em)) {
+        @content;
+    }
+}
