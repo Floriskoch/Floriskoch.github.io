@@ -14,7 +14,18 @@ html {
     box-sizing: inherit;
 }
 
+/*
+ * Media
+ */
+img,
+object,
+iframe,
+video {
+    max-width: 100%; width: auto; height: auto;
+}
+
 @import './layout/typography';
 @import './layout/content';
 
 @import './modules/intro';
+@import './modules/showcase';

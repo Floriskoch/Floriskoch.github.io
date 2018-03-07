@@ -1,4 +1,17 @@
 /**
+ * Clearfix
+ * Actually an @extend, but we don't want to depend on inclusion order
+ *
+ * Usage:
+ * section { @include clearfix(); }
+ */
+ @mixin clearfix {
+    &::after {
+        display: table; clear: both; content: '';
+    }
+}
+
+/**
  * Media query breakpoints mixins
  *
  * Usage:

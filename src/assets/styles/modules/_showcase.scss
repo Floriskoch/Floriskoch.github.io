@@ -1,0 +1,8 @@
+.showcase {
+    position: relative; margin: 40px 0;
+    overflow-y: hidden; overflow-x: auto; white-space: nowrap;
+}
+.showcase__item {
+    display: inline-block;
+    width: 40%; margin-left: 20px;
+}
