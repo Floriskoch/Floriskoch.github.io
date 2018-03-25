@@ -1,6 +1,27 @@
 /*
  * Typography
  */
+html {
+    font-size: 62.5%; line-height: $default-line-height;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     font-family: $body-font; font-weight: normal; font-size: 16px;
+    color: $black;
+}
+
+a {
+    color: $black; text-decoration: none;
+}
+
+p a {
+    background-color: $lightYellow;
+}
+
+h1,
+h2,
+h3,
+h4 {
+
 }

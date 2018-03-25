@@ -1,30 +1,32 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 
 const ProjectShowcase = data => {
   return (
-    <div className="showcase">
-
+    <ul className="list--featured">
       {data.projects.map(({ node }) => {
         const fm = node.frontmatter;
-        const image = fm.image.childImageSharp.responsiveSizes;
-
+        const image = fm.image.childImageSharp;
         return (
-          <div key={node.id} className="showcase__item">
+          <li key={node.id} className="list--featured__item">
             <Link to={ fm.path }>
-              <h3>{ fm.title }</h3>
-              <img src={ image.src } />
+              <Img sizes={{ ...image.sizes, aspectRatio: 16/9 }} />
+              <div className="list--featured__item-content">
+                <h3>{ fm.title }</h3>
+                <p>{ fm.subtitle }</p>
+              </div>
             </Link>
-          </div>
+          </li>
         );
       })}
 
-      <div className="showcase__item">
+      <li className="list--featured__item list--featured__item--button">
         <Link to="/projects">
-          See all projects
+          <div className="list--featured__item-content"></div>
         </Link>
-      </div>
-    </div>
+      </li>
+    </ul>
   )
 };
 

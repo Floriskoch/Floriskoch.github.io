@@ -1,0 +1,69 @@
+/**
+ * Featured list
+ */
+.list--featured {
+    @include list-reset;
+    position: relative; margin: 40px 0;
+    overflow-y: hidden; overflow-x: auto; white-space: nowrap;
+}
+.list--featured__item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 70%; margin-left: 20px;
+    @include bp-min($small) {
+        width: 40%;
+    }
+}
+.list--featured__item a {
+    text-decoration: none;
+    color: $black; transition: color .15s ease-out;
+}
+.list--featured__item a:hover {
+
+    .list--featured__item-content {
+        opacity: 1;
+    }
+}
+.list--featured__item-content {
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    background-color: $lightGreen;
+    opacity: 0;
+    transition: opacity .2s ease-out;
+    text-align: center;
+}
+
+.list--featured__item--button {
+    position: relative;
+    vertical-align: top;
+    @include aspect-ratio(16, 9);
+}
+.list--featured__item--button .list--featured__item-content {
+    opacity: 1;
+    background-color: $lightGreen;
+    background-image: url('../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+}
+
+/**
+ * Overview list
+ */
+.list--overview {
+    @include list-reset;
+    display: flex;
+    flex-direction: column;
+}
+.list--overview__item {
+    display: flex;
+    margin-bottom: 15px;
+}
+.list--overview__item figure {
+    width: 25%;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+.list--overview__item h3 {
+    margin-top: 0;
+}

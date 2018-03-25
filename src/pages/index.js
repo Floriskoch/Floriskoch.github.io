@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import Intro from '../components/intro'
 import ProjectShowcase from '../components/projectShowcase'
 
-const IndexPage = ({ data }) => { console.log(data);
+const IndexPage = ({ data }) => {
   const { edges: projects } = data.allMarkdownRemark;
   return (
     <div>
@@ -16,23 +16,24 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQuery {
-    allMarkdownRemark(limit: 4) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] },
+      limit: 3
+    ) {
       edges {
         node {
           id
           frontmatter {
             image {
               childImageSharp {
-                responsiveSizes(maxWidth: 600) {
-                  src
-                  srcSet
-                  sizes
+                sizes(maxWidth: 600) {
+                  ...GatsbyImageSharpSizes_noBase64
                 }
               }
             }
             path
             title
-            date(formatString: "DD MMMM, YYYY")
+            subtitle
           }
           excerpt
         }

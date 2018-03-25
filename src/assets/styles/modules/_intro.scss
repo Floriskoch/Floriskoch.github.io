@@ -1,5 +1,9 @@
 .intro {
+    padding-top: 1em; padding-bottom: 1em;
+    margin-top: 0; margin-bottom: 0;
+    font-size: 2em;
     @include content(medium);
-    padding-top: 2em; padding-bottom: 2em;
-    font-size: 4em;
+    @include bp-min($small) {
+        font-size: 3.5em;
+    }
 }
