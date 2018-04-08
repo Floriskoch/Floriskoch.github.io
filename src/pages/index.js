@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Intro from '../components/intro'
-import ProjectShowcase from '../components/projectShowcase'
+import SiteFooter from '../components/site-footer'
+import ProjectShowcase from '../components/project-showcase'
 
 const IndexPage = ({ data }) => {
   const { edges: projects } = data.allMarkdownRemark;
@@ -9,6 +10,7 @@ const IndexPage = ({ data }) => {
     <div>
       <Intro />
       <ProjectShowcase projects={projects} />
+      <SiteFooter />
     </div>
   );
 }
@@ -18,7 +20,7 @@ export const query = graphql`
   query IndexPageQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      limit: 3
+      limit: 4
     ) {
       edges {
         node {

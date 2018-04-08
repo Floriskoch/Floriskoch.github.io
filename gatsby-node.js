@@ -8,7 +8,7 @@ const path = require("path");
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
-  const projectTemplate = path.resolve(`src/templates/projectTemplate.js`);
+  const projectTemplate = path.resolve(`src/templates/project-template.js`);
 
   return graphql(`
     {

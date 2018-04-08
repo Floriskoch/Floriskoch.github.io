@@ -4,6 +4,7 @@
     font-size: 2em;
     @include content(medium);
     @include bp-min($small) {
-        font-size: 3.5em;
+        font-size: 2.5em;
+        padding-top: 2em; padding-bottom: 2em;
     }
 }

@@ -1,0 +1,18 @@
+.site-footer {
+    padding: 2em 0;
+}
+.site-footer__inner {
+    text-align: center;
+    @include content(medium);
+}
+.site-footer ul {
+    font-size: map-get($font-sizes-small, h3);
+    @include list-reset;
+    @include bp-min($small) {
+        font-size: map-get($font-sizes-large, h3);
+    }
+}
+.site-footer li {
+    display: inline-block;
+    margin: 0 10px;
+}

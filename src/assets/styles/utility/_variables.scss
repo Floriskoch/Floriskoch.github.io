@@ -1,10 +1,8 @@
 // COLORS
 $black: #222;
 $lightYellow: #FEF9C7;
-$darkYellow: #FCE181;
-$lightGreen: #9FEDD7;
-$darkGreen: #026670;
-$grey: #EDEAE5;
+$lightGreen: #D4ECF7;
+$white: #FFF;
 
 // FONTS
 $body-font: 'GT Walsheim', arial, sans-serif;
@@ -16,9 +14,6 @@ $site-width-medium: 840px;
 $site-width-large: 1120px;
 $site-max-width: 1140px;
 
-// BREAKPOINTS
-// The following is inspired by this article:
-// http://css-tricks.com/media-queries-sass-3-2-and-codekit/
 $small: 540;
 $medium: 680;
 $medium-large: 900;
@@ -27,7 +22,22 @@ $extra-large: 1400;
 $huge: 1700;
 
 $gutter-xs: 10px;
-$gutter-sm: 15px;
+$gutter-sm: 10px;
 $gutter: 30px;
 $gutter-lg: 60px;
 $gutter-xl: 90px;
+
+// Font sizes
+$font-sizes-small: (
+    h1: 32px,
+    h2: 24px,
+    h3: 20px,
+    body: 16px
+);
+
+$font-sizes-large: (
+    h1: 60px,
+    h2: 42px,
+    h3: 30px,
+    body: 20px
+);
