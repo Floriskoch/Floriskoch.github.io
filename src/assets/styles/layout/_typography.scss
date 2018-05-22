@@ -16,17 +16,21 @@ body {
 
 a {
     color: $black; text-decoration: none;
+
+    @include hocus {
+        text-decoration: underline;
+    }
 }
 
-li a,
 p a {
-    background: linear-gradient(to right, $lightYellow, $lightYellow 10%, $lightGreen 90%, $lightGreen);
+    background: linear-gradient(to right, $lightYellow, $lightYellow 10%, $lightBlue 90%, $lightBlue);
     background-size: 1000%;
     background-position-x: 0%;
     transition: background .2s ease-out;
 
     @include hocus {
         background-position-x: 100%;
+        text-decoration: none;
     }
 }
 
@@ -51,12 +55,5 @@ h3,
     font-size: map-get($font-sizes-small, h3);
     @include bp-min($small) {
         font-size: map-get($font-sizes-large, h3);
-    }
-}
-
-.section-heading {
-    margin: 0 10px;
-    @include bp-min($small) {
-        margin: 0 20px;
     }
 }

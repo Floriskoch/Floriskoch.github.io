@@ -3,16 +3,23 @@
  */
 .list--featured {
     @include list-reset;
-    @include clearfix;
-    position: relative; margin: 0 10px 40px 10px;
+    margin-bottom: 2em;
+    margin-left: -10px; margin-right: -10px;
+    display: flex; flex-wrap: wrap;
 }
 .list--featured__item {
-    position: relative; float: left;
-    overflow: hidden;
-    width: 100%; margin: 0 0 20px 0;
+    position: relative;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    width: 100%;
     @include bp-min($small) {
-        width: calc(100% / 2 - 20px);
-        margin: 0 10px 20px 10px;
+        width: 50%;
+    }
+}
+.list--featured__item h3,
+.list--featured__item p {
+    @include bp-min($large) {
+        display: none;
     }
 }
 .list--featured__item h3 {
@@ -21,6 +28,7 @@
 .list--featured__item p {
     margin: 0; margin-bottom: 20px;
 }
+
 
 // .list--featured__item a {
 //     text-decoration: none;

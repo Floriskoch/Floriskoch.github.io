@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import Header from '../components/Header'
+import SiteHeader from '../components/site-header'
+import SiteFooter from '../components/site-footer'
 import '../assets/styles/main.scss'
 import favicon from '../assets/images/favicon-32x32.png'
 
@@ -18,10 +19,16 @@ const TemplateWrapper = ({ children }) => (
           { rel: 'shortcut icon', type: 'image/png', href: `${ favicon }` }
       ]}
     />
-    <Header />
-    <div>
-      {children()}
+
+    <div className="content-container">
+      <div className="content-container__inner">
+        <SiteHeader />
+
+        { children() }
+      </div>
     </div>
+
+    <SiteFooter />
   </div>
 );
 

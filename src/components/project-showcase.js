@@ -6,9 +6,7 @@ import { SSL_OP_PKCS1_CHECK_2 } from 'constants';
 const ProjectShowcase = data => {
   return (
     <div className="content--large">
-      <div className="section-heading">
-        <h2>Recent work</h2>
-      </div>
+      <h2>Recent work</h2>
 
       <ul className="list--featured">
         {data.projects.map(({ node }) => {

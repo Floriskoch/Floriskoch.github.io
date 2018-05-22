@@ -1,18 +1,27 @@
 .site-footer {
-    padding: 2em 0;
+    padding: 3em 0;
+    background: $black;
+    color: $white;
 }
 .site-footer__inner {
     text-align: center;
     @include content(medium);
 }
 .site-footer ul {
-    font-size: map-get($font-sizes-small, h3);
     @include list-reset;
+    font-size: map-get($font-sizes-small, h4);
+    margin-bottom: 1rem;
     @include bp-min($small) {
-        font-size: map-get($font-sizes-large, h3);
+        font-size: map-get($font-sizes-large, h4);
     }
 }
 .site-footer li {
     display: inline-block;
     margin: 0 10px;
+}
+.site-footer a {
+    color: inherit;
+}
+.site-footer p {
+    margin: 0;
 }

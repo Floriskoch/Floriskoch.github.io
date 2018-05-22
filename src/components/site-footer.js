@@ -10,6 +10,8 @@ const SiteFooter = () => (
         <li><a href="https://twitter.com/kochfloris" target="_blank">Twitter</a></li>
         <li><a href="mailto:floriskoch@gmail.com" target="_blank">Email</a></li>
       </ul>
+
+      <p><small>Copyright Floris S. Koch { (new Date()).getFullYear() } ©</small></p>
     </div>
   </footer>
 )

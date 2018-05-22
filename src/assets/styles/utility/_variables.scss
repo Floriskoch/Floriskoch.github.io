@@ -1,7 +1,7 @@
 // COLORS
 $black: #222;
 $lightYellow: #FEF9C7;
-$lightGreen: #D4ECF7;
+$lightBlue: #D4ECF7;
 $white: #FFF;
 
 // FONTS
@@ -32,6 +32,7 @@ $font-sizes-small: (
     h1: 32px,
     h2: 24px,
     h3: 20px,
+    h4: 18px,
     body: 16px
 );
 
@@ -39,5 +40,6 @@ $font-sizes-large: (
     h1: 60px,
     h2: 42px,
     h3: 30px,
+    h4: 24px,
     body: 20px
 );

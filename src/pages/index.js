@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Intro from '../components/intro'
-import SiteFooter from '../components/site-footer'
 import ProjectShowcase from '../components/project-showcase'
 
 const IndexPage = ({ data }) => {
@@ -10,7 +9,6 @@ const IndexPage = ({ data }) => {
     <div>
       <Intro />
       <ProjectShowcase projects={projects} />
-      <SiteFooter />
     </div>
   );
 }

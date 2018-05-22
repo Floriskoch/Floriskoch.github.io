@@ -32,3 +32,13 @@ $content-sizes: (
         @include content($size);
     }
 }
+
+
+.content-container {
+    background: linear-gradient(to bottom, darken($lightYellow, 10%), darken($lightBlue, 10%));
+    padding-left: 10px;
+}
+.content-container__inner {
+    background-color: $white;
+    @include clearfix;
+}
