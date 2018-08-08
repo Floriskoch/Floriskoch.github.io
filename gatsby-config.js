@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/portfolio",
   siteMetadata: {
     title: 'Floris S. Koch',
   },
@@ -26,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/projects`,
+        path: `${__dirname}/src/projects`,
         name: "markdown-pages",
       },
     },

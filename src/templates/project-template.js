@@ -7,7 +7,8 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   return (
     <div className="content">
-      <h1>{frontmatter.title}</h1>
+      <h1 className="h2">{frontmatter.title}</h1>
+      <p>{frontmatter.subtitle}</p>
       <div
         className="content__inner"
         dangerouslySetInnerHTML={{ __html: html }}
@@ -24,6 +25,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        subtitle
       }
     }
   }

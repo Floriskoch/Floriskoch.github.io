@@ -14,24 +14,39 @@ body {
     }
 }
 
+p {
+    margin-top: 0; margin-bottom: 2rem;
+}
+
 a {
-    color: $black; text-decoration: none;
+    color: $black; text-decoration: underline;
 
     @include hocus {
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
-p a {
-    background: linear-gradient(to right, $lightYellow, $lightYellow 10%, $lightBlue 90%, $lightBlue);
-    background-size: 1000%;
-    background-position-x: 0%;
-    transition: background .2s ease-out;
+.content-container p a {
+    padding: 0 .1em;
+    background: $lightYellow;
+    transition: background .1s ease-out, color .1s ease-out;
+    text-decoration: none;
 
     @include hocus {
-        background-position-x: 100%;
         text-decoration: none;
+        animation: link-hover .15s forwards;
     }
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+    margin-top: 0; margin-bottom: 1rem;
 }
 
 h1,
@@ -56,4 +71,22 @@ h3,
     @include bp-min($small) {
         font-size: map-get($font-sizes-large, h3);
     }
+}
+
+h1 + p,
+.h1 + p {
+    margin-top: -1.5rem;
+}
+
+h3 + p,
+.h3 + p,
+h4 + ul,
+.h4 + ul {
+    margin-top: -.5rem;
+}
+
+code {
+    padding: .25em .2em;
+    background: $gray !important;
+    font-size: .85em;
 }

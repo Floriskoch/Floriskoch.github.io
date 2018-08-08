@@ -1,30 +1,23 @@
 import React from 'react'
-import Link from 'gatsby-link';
-import Img from 'gatsby-image';
-import { SSL_OP_PKCS1_CHECK_2 } from 'constants';
+import ListFeaturedItem from './list-featured-item'
 
 const ProjectShowcase = data => {
   return (
-    <div className="content--large">
-      <h2>Recent work</h2>
+    <section className="content--large project-showcase">
+      <h2 className="h3">Recent work</h2>
 
       <ul className="list--featured">
         {data.projects.map(({ node }) => {
           const fm = node.frontmatter;
           const image = fm.image.childImageSharp;
+
           return (
-            <li key={node.id} className="list--featured__item">
-              <Link to={ fm.path }>
-                <Img sizes={{ ...image.sizes, aspectRatio: 4/3 }} />
-                <h3>{ fm.title }</h3>
-                <p>{ fm.subtitle }</p>
-              </Link>
-            </li>
-          );
+            <ListFeaturedItem fm={fm} image={image} key={node.id} />
+          )
         })}
       </ul>
-    </div>
+    </section>
   )
-};
+}
 
 export default ProjectShowcase

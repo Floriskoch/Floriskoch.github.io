@@ -1,8 +1,9 @@
 // COLORS
 $black: #222;
-$lightYellow: #FEF9C7;
+$lightYellow: #ffff4e;
 $lightBlue: #D4ECF7;
 $white: #FFF;
+$gray: #eee;
 
 // FONTS
 $body-font: 'GT Walsheim', arial, sans-serif;
@@ -29,17 +30,17 @@ $gutter-xl: 90px;
 
 // Font sizes
 $font-sizes-small: (
-    h1: 32px,
-    h2: 24px,
-    h3: 20px,
-    h4: 18px,
-    body: 16px
+    h1: 3.2rem,
+    h2: 2.4rem,
+    h3: 2rem,
+    h4: 1.8rem,
+    body: 1.6rem
 );
 
 $font-sizes-large: (
-    h1: 60px,
-    h2: 42px,
-    h3: 30px,
-    h4: 24px,
-    body: 20px
+    h1: 6rem,
+    h2: 4.2rem,
+    h3: 3rem,
+    h4: 2.4rem,
+    body: 2rem
 );

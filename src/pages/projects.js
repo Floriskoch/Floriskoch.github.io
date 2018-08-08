@@ -1,39 +1,30 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import Img from 'gatsby-image';
+import React from 'react'
+import ListFeaturedItem from '../components/list-featured-item'
 
 export default ({ data }) => {
   return (
-    <div className="content--medium">
-      <h1>Projects</h1>
+    <section className="content--medium">
+      <h1 className="h3">Projects</h1>
 
-      <ul className="list--overview">
+      <ul className="list--featured">
         {data.allMarkdownRemark.edges.map(({ node }) => {
           const fm = node.frontmatter;
           const image = fm.image.childImageSharp;
+
           return (
-            <li key={ node.id } className="list--overview__item">
-              <figure>
-                <Img sizes={ image.sizes } />
-              </figure>
-              <div className="list--overview__item-body">
-                <Link to={ node.frontmatter.path }>
-                  <h3>{ node.frontmatter.title }</h3>
-                </Link>
-                <p>{ node.excerpt }</p>
-              </div>
-            </li>
-          );
+            <ListFeaturedItem fm={fm} image={image} key={node.id} />
+          )
         })}
       </ul>
-      <Link to="/">Go back to the homepage</Link>
-    </div>
-  );
-};
+    </section>
+  )
+}
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark (
+      limit: 12
+    ) {
       totalCount
       edges {
         node {
@@ -41,9 +32,10 @@ export const query = graphql`
           frontmatter {
             path
             title
+            subtitle
             image {
               childImageSharp {
-                sizes(maxWidth: 600) {
+                sizes(maxWidth: 600, quality: 100) {
                   ...GatsbyImageSharpSizes_noBase64
                 }
               }
@@ -54,5 +46,5 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 

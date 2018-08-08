@@ -3,15 +3,19 @@ import Link from 'gatsby-link'
 
 const SiteFooter = () => (
   <footer className="site-footer">
-    <div className="site-footer__inner">
+    <div className="content--medium">
+      <h3>Floris S. Koch</h3>
+
+      <p>Want to collaborate? Great! Send me an e-mail <a href="mailto:floriskoch@gmail.com">floriskoch@gmail.com</a>.</p>
+
+      <p>Or find me on:</p>
       <ul>
-        <li><a href="https://www.linkedin.com/in/floriskoch" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/floriskoch" target="_blank">GitHub</a></li>
-        <li><a href="https://twitter.com/kochfloris" target="_blank">Twitter</a></li>
-        <li><a href="mailto:floriskoch@gmail.com" target="_blank">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/floriskoch" target="_blank" rel="nofollow noopener">linkedin</a></li>
+        <li><a href="https://github.com/floriskoch" target="_blank" rel="nofollow noopener">github</a></li>
+        <li><a href="https://twitter.com/kochfloris" target="_blank" rel="nofollow noopener">twitter</a></li>
       </ul>
 
-      <p><small>Copyright Floris S. Koch { (new Date()).getFullYear() } ©</small></p>
+      <p><small>© { (new Date()).getFullYear() } | Floris S. Koch</small></p>
     </div>
   </footer>
 )

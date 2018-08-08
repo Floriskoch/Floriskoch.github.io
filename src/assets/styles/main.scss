@@ -1,8 +1,10 @@
 @import './vendor/normalize';
 @import './utility/variables';
+@import './utility/animations';
 @import './utility/functions';
 @import './utility/mixins';
 @import './utility/fonts';
+@import './utility/utils';
 
 html {
     box-sizing: border-box;
@@ -32,8 +34,10 @@ video {
 @import './layout/typography';
 @import './layout/content';
 
+@import './modules/experience';
 @import './modules/intro';
 @import './modules/lists';
 @import './modules/overlay';
+@import './modules/project-showcase';
 @import './modules/site-header';
 @import './modules/site-footer';
