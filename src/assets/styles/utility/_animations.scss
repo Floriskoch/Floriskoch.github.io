@@ -1,6 +1,6 @@
 @keyframes link-hover {
-    0% { background-color: $lightYellow; color: $black; }
-    25% { background-color: $black; color: $white; }
-    50% { background-color: $lightYellow; color: $black; }
-    100% { background-color: $black; color: $white; }
+    0% { background-color: $lightYellow; color: $lightBlue; }
+    25% { background-color: $lightBlue; color: $black; }
+    50% { background-color: $lightYellow; color: $lightBlue; }
+    100% { background-color: $lightBlue; color: $black; }
 }
