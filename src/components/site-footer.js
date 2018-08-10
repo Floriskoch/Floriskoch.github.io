@@ -6,7 +6,7 @@ const SiteFooter = () => (
     <div className="content--medium">
       <h3>Floris S. Koch</h3>
 
-      <p>Want to collaborate? Great! Send me an e-mail <a href="mailto:floriskoch@gmail.com">floriskoch@gmail.com</a>.</p>
+      <p>Want to collaborate? Great! Send me an e-mail <a href="mailto:hi@floriskoch.com">hi@floriskoch.com</a>.</p>
 
       <p>Or find me on:</p>
       <ul>

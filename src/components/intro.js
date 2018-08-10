@@ -7,7 +7,7 @@ const Intro = () => (
       Hello I’m <strong>Floris</strong>,
       a freelance developer based in Amsterdam.
       Below you'll find some of my <strong><Link to="/projects">work</Link></strong>.
-      Feel free to contact me at <strong><a href="mailto:floriskoch@gmail.com">floriskoch@gmail.com</a></strong> if you want to collaborate.
+      Feel free to contact me at <strong><a href="mailto:hi@floriskoch.com">hi@floriskoch.com</a></strong> if you want to collaborate.
     </p>
   </section>
 )
