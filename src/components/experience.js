@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 const Experience = () => {
   return (
     <section className="content--medium experience">
-      <h2 className="h3">Experience</h2>
+      <h2>Experience</h2>
 
       <p>In my recent projects I've worked with following tech stack:</p>
 

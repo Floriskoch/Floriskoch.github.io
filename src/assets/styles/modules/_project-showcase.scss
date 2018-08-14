@@ -1,6 +1,20 @@
 .project-showcase {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+
+    @include bp-min($small) {
+        margin-bottom: 4rem;
+    }
+
     @include bp-min($large) {
         margin-bottom: 8rem;
+    }
+}
+
+.project-showcase__link {
+    margin-top: -8px;
+    display: flex; justify-content: flex-start;
+
+    @include bp-min($small) {
+        justify-content: flex-end;
     }
 }

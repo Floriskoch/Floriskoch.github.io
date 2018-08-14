@@ -13,13 +13,10 @@ ul {
 .list--featured__item {
     position: relative;
     padding: 0 10px;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     width: 100%;
     @include bp-min($small) {
         width: 50%;
-    }
-    @include bp-min($large) {
-        margin-bottom: 2rem;
     }
 }
 .list--featured__item:hover .list--featured__heading {
