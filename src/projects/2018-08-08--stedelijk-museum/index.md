@@ -1,6 +1,6 @@
 ---
 path: "/projects/stedelijk-museum"
-date: "2018-08-08"
+date: "2018-08-09"
 title: "Stedelijk Museum"
 subtitle: "Amsterdam modern art museum website"
 image: "./bg.jpg"

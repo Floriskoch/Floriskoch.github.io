@@ -15,6 +15,7 @@ const Experience = () => {
         <li>Content management (CraftCMS, OctoberCMS, Kirby, WordPress (Bedrock))</li>
         <li>Scrum (Jira, Trello)</li>
         <li>GIT (Git Flow, One Flow)</li>
+        <li>Static site generators (GatsbyJS, Hugo)</li>
       </ul>
 
       <p>In the past I've also worked with tools and libraries such as jQuery and Angular 1.x. However, I prefer working with more modern ones such as mentioned above.</p>

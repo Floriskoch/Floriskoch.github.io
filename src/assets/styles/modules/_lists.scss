@@ -16,7 +16,11 @@ ul {
     margin-bottom: 2rem;
     width: 100%;
     @include bp-min($small) {
+        margin-bottom: 4rem;
         width: 50%;
+    }
+    @include bp-min($large) {
+        margin-bottom: 2rem;
     }
 }
 .list--featured__item:hover .list--featured__heading {
@@ -27,11 +31,12 @@ ul {
 }
 .list--featured__heading {
     @include bp-min($large) {
+        padding: 8rem;
         opacity: 0; transition: opacity .1s ease-out;
         position: absolute; left: 10px; right: 10px; top: 0; bottom: 0;
         display: flex; align-items: center; justify-content: center; flex-direction: column;
         background-color: rgba($color: $black, $alpha: .95);
-        color: $white;
+        color: $white; text-align: center;
     }
 }
 .list--featured__heading h3 {

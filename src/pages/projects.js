@@ -3,8 +3,8 @@ import ListFeaturedItem from '../components/list-featured-item'
 
 export default ({ data }) => {
   return (
-    <section className="content--medium">
-      <h1 className="h3">Projects</h1>
+    <section className="content--medium content--projects">
+      <h1 className="h2">Projects</h1>
 
       <ul className="list--featured">
         {data.allMarkdownRemark.edges.map(({ node }) => {
@@ -23,6 +23,7 @@ export default ({ data }) => {
 export const query = graphql`
   query IndexQuery {
     allMarkdownRemark (
+      sort: { order: DESC, fields: [frontmatter___date] },
       limit: 12
     ) {
       totalCount

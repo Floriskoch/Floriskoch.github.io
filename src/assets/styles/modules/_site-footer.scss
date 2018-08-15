@@ -31,3 +31,21 @@
 .site-footer a {
     color: inherit;
 }
+
+.site-footer__inner {
+    display: flex; justify-content: space-between; align-items: center; flex-direction: column-reverse;
+
+    @include bp-min($small) {
+        flex-direction: row;
+    }
+}
+
+.site-footer__profile-image {
+    margin-bottom: 2em;
+    border-radius: 50%;
+    width: 200px; height: 200px;
+
+    @include bp-min($small) {
+        margin-left: 4em; margin-bottom: 0;
+    }
+}
