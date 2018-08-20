@@ -17,9 +17,8 @@ class TemplateWrapper extends React.Component {
         <Helmet
           title="Floris S. Koch"
           meta={[
-            { name: 'description', content: '' },
+            { name: 'description', content: 'Floris Koch is a freelance developer based in Amsterdam.' },
             { name: 'keywords', content: '' },
-            { name: 'robots', content: 'noindex, nofollow'}
           ]}
           link={[
               { rel: 'shortcut icon', type: 'image/png', href: `${ favicon }` }
